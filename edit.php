@@ -51,7 +51,7 @@ $ime = $db->get_ime($_GET['id']);
         <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
 
         <label for="">Ime</label><br>
-        <input type="text" name="imePrezime" value="<?php echo $ime[0]['imePrezime']; ?>"><br><br>
+        <input type="text" name="imePrezime" required pattern="[A-Ža-ž0-9]{1,20}" value="<?php echo $ime[0]['imePrezime']; ?>"><br><br>
 
         <input type="submit" value="Ažuriraj podatke">
     </form>
