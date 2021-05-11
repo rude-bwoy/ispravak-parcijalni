@@ -86,6 +86,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             <?php endif; ?>
         </table>
 
-
+        <br><br><br><br>
+    Ovo je test predavača!
 </body>
 </html>
