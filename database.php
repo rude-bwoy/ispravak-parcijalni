@@ -97,7 +97,7 @@ class Database {
 
     public function update_ime($id) {
 
-            $ime = $_GET['imePrezime'];
+            $ime = $_POST['imePrezime'];
 
             $statement = $this->connection->prepare("UPDATE ime_prezime SET imePrezime='$ime' WHERE id=$id");
 

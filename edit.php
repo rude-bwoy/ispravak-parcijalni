@@ -17,12 +17,12 @@ $db = new Database('remotemysql.com', 'rKJoSBuvYr', 'BRaG9Lx50I', 'rKJoSBuvYr');
 $message = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    
     if(empty($_POST['imePrezime'])) {
 
         $message = 'Molimo popuniti polje!';
 
     } else {
+        
         $db->update_ime($_POST['id']);
     }
 } 
