@@ -17,13 +17,13 @@ $db = new Database('remotemysql.com', 'rKJoSBuvYr', 'BRaG9Lx50I', 'rKJoSBuvYr');
 $message = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
+    
     if(empty($_POST['imePrezime'])) {
 
         $message = 'Molimo popuniti polje!';
 
     } else {
-        $db->get_ime($_POST['id']);
+        $db->update_ime($_POST['id']);
     }
 } 
 
@@ -46,12 +46,12 @@ $ime = $db->get_ime($_GET['id']);
     <hr>
 
     <?php if(!empty($message)) {echo $message; } ?>
-    <form method="get" action="update.php">
+    <form method="post" action="">
 
         <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
 
         <label for="">Ime</label><br>
-        <input type="text" name="imePrezime" required pattern="[A-Ža-ž0-9]{1,20}" value="<?php echo $ime[0]['imePrezime']; ?>"><br><br>
+        <input type="text" name="imePrezime" value="<?php echo $ime[0]['imePrezime']; ?>"><br><br>
 
         <input type="submit" value="Ažuriraj podatke">
     </form>
