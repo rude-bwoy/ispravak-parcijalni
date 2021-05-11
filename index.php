@@ -49,7 +49,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     <h1>Ispravak - Ivan Vidović</h1>
     <br><br>
 
-
+    <h2>proba za CI i CD</h2>
 
     <?php if(!empty($message)) {echo $message; } ?>
         <form action="" method="post">
