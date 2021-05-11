@@ -1,0 +1,2 @@
+# ispravak-parcijalni
+ispravak
